@@ -4,9 +4,9 @@
 // Company: 
 // Engineer:
 //
-// Create Date:   20:16:59 03/22/2015
+// Create Date:   18:14:54 06/16/2015
 // Design Name:   top
-// Module Name:   G:/Prom/ISE/SingleCycl_LCD/testforwhole.v
+// Module Name:   G:/Prom/ISE/Pipeline_CPU/testforwholen.v
 // Project Name:  SingleCycl_LCD
 // Target Device:  
 // Tool versions:  
@@ -22,12 +22,12 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
-module testforwhole;
+module testforwholen;
 
 	// Inputs
 	reg CCLK;
-	reg BTN2;
 	reg BTN1;
+	reg BTN2;
 	reg BTN3;
 	reg [3:0] SW;
 
@@ -37,32 +37,19 @@ module testforwhole;
 	wire LCDE;
 	wire [3:0] LCDDAT;
 	wire [7:0] LED;
-	wire [31:0] disp_num;
-   wire [31:0] PC,AAdat,BBdat,Result;
-	wire [2:0]ALUoper;
-	wire JUMP_ID_EX,BEQ_EX_MEM,BNE_EX_MEM,ZERO_EX_MEM;
+
 	// Instantiate the Unit Under Test (UUT)
 	top uut (
 		.CCLK(CCLK), 
-		.BTN1(BTN1),
+		.BTN1(BTN1), 
 		.BTN2(BTN2), 
-		.BTN3(BTN3),
+		.BTN3(BTN3), 
 		.SW(SW), 
 		.LCDRS(LCDRS), 
 		.LCDRW(LCDRW), 
 		.LCDE(LCDE), 
-		.LCDDAT(LCDDAT)/*, 
-		.LED(LED),
-		.disp_num(disp_num),
-		.PC(PC),
-		.AAdat(AAdat),
-		.BBdat(BBdat),
-		.Result(Result),
-		.ALUoper(ALUoper),
-		.JUMP_ID_EX(JUMP_ID_EX),
-		.BEQ_EX_MEM(BEQ_EX_MEM),
-		.BNE_EX_MEM(BNE_EX_MEM),
-		.ZERO_EX_MEM(ZERO_EX_MEM)*/
+		.LCDDAT(LCDDAT), 
+		.LED(LED)
 	);
 
 	initial begin
@@ -278,5 +265,6 @@ module testforwhole;
 	#1;
 	CCLK=1;
 	end
+      
 endmodule
 

@@ -44,8 +44,8 @@ output [5:0] single_count;
 		case(single_count)
 		//	5: PCclk_[0] <= 1;
 		//	10: PCclk_[1] <= 1;
-			5: PCclk_[3] <= 1;//Ð´¼Ä´æÆ÷
-			8: PCclk_[4] <= 1;//Êý¾Ý´æ´¢Æ÷²Ù×÷
+			8: PCclk_[3] <= 1;//Ð´¼Ä´æÆ÷
+			5: PCclk_[4] <= 1;//Êý¾Ý´æ´¢Æ÷²Ù×÷
 			10: PCclk_[2] <= 1;//¶Á¼Ä´æÆ÷
 			default:PCclk_ <= 10'd0;
 		endcase

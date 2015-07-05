@@ -63,3 +63,46 @@ begin
 			endcase
 end
 endmodule
+module Parse5(input clk, input [4:0]data, output reg[7:0] odata
+);
+
+always @(posedge clk)
+begin
+	case(data[4:0]) 
+			4'b0000:odata[7:0] <= "0";
+			4'b0001:odata[7:0] <= "1";
+			4'b0010:odata[7:0] <= "2";
+			4'b0011:odata[7:0] <= "3";
+			4'b0100:odata[7:0] <= "4";
+			4'b0101:odata[7:0] <= "5";
+			4'b0110:odata[7:0] <= "6";
+			4'b0111:odata[7:0] <= "7";
+			4'b1000:odata[7:0] <= "8";
+			4'b1001:odata[7:0] <= "9";
+			4'b1010:odata[7:0] <= "A";
+			4'b1011:odata[7:0] <= "B";
+			4'b1100:odata[7:0] <= "C";
+			4'b1101:odata[7:0] <= "D";
+			4'b1110:odata[7:0] <= "E";
+			4'b1111:odata[7:0] <= "F";
+			5'd15:odata[7:0]<="a";
+			5'd16:odata[7:0]<="b";
+			5'd17:odata[7:0]<="c";
+			5'd18:odata[7:0]<="d";
+			5'd19:odata[7:0]<="e";
+			5'd20:odata[7:0]<="f";
+			5'd21:odata[7:0]<="g";
+			5'd22:odata[7:0]<="h";
+			5'd23:odata[7:0]<="i";
+			5'd24:odata[7:0]<="j";
+			5'd25:odata[7:0]<="k";
+			5'd26:odata[7:0]<="l";
+			5'd27:odata[7:0]<="m";
+			5'd28:odata[7:0]<="n";
+			5'd29:odata[7:0]<="o";
+			5'd30:odata[7:0]<="p";
+			5'd31:odata[7:0]<="q";
+			default:odata[7:0] <= "0";
+			endcase
+end
+endmodule
